@@ -358,23 +358,16 @@ span {
   font-size: 1.3em;
 }
 /* Personalized styles education*/
-
 .course-title{
   font-size: 1.6em;
   text-align: center;
 }
-
-
-
 .course-header{
   padding: 0;
 }
-
 .language-used{
   font-style: italic;
 }
-
 #lets-connect {
-
   background-color: #0a0a33;
 }

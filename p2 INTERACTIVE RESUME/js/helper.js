@@ -88,23 +88,17 @@ $(document).ready(function() {
   });
 });
 
-
-
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.
 See the documentation below for more details.
 https://developers.google.com/maps/documentation/javascript/reference
 */
 var map;    // declares a global map variable
-
-
 /*
 Start here! initializeMap() is called when page is loaded.
 */
 function initializeMap() {
-
   var locations;
-
   var mapOptions = {
     disableDefaultUI: true
   };
@@ -114,17 +108,13 @@ function initializeMap() {
   appended to #mapDiv in resumeBuilder.js.
   */
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
-
-
   /*
   locationFinder() returns an array of every location string from the JSONs
   written for bio, education, and work.
   */
   function locationFinder() {
-
     // initializes an empty array
     var locations = [];
-
     // adds the single location property from bio to the locations array
     locations.push(bio.contacts.location);
 
@@ -179,12 +169,7 @@ function initializeMap() {
       // your code goes here!
 
       infoWindow.open(map, marker);
-
-
-
-
     });
-
     // this is where the pin actually gets added to the map.
     // bounds.extend() takes in a map location object
     bounds.extend(new google.maps.LatLng(lat, lon));
