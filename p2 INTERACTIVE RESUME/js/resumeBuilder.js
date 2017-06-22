@@ -1,4 +1,17 @@
- function DisplayHeader(){
+/*
+  Future Development
+  V1
+  HEADER: is good enough possibly consider background color
+  Future projects: image 50% left text floated to the right
+  Current Project: Needs massive overhaul. Needs to be put inside divs. links to my project and links to the course
+*/
+
+
+
+/*
+Display HEADER
+*/
+function DisplayHeader(){
 	var programmerName = "Daniel Johnson";
 	var programmerRole = "FRONT-END WEB DEVELOPER";
 	var formattedName = HTMLheaderName.replace("%data%", programmerName);
@@ -6,11 +19,14 @@
 	var formattedRole = HTMLheaderRole.replace("%data%", programmerRole);
 	$("#header").prepend(formattedRole);
     $("#header").prepend(formattedName);
-
 }
+
 DisplayHeader();
 
-//Bio object eventually send this down 
+/*
+  Bio info
+
+*/
 var bio = {
 	"name" : "Daniel Johnson",
 	"role" : "FRONT-END WEB DEVELOPER",
@@ -23,10 +39,9 @@ var bio = {
 		"facebook": "Daniel-P-Johnson",
 		"aboutme": "undreamtmayhem",
 		},
-		"skills" : ["HTML5", "CSS/Less/Sass","JS/jQuery/Angular/nodeJS","Python Django", "Ruby on the rails", "ASP.net"],
+		"skills" : ["HTML5", "CSS/Less/Sass","JS/jQuery/Angular/nodeJS/ember","Python Django", "Mean Stack", "ASP.net"],
 		"pictureURL" :"./images/profile.jpg"
 };
-
 bio.Display = function(){
 	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
@@ -39,42 +54,39 @@ bio.Display = function(){
 
 	var formattedBioPic = HTMLbioPic.replace("%data%", bio.pictureURL);
 	$("#topContacts").after(formattedBioPic);
-		
+
 	function skills(){
 	if(bio.skills.length > 0){
 		$('#header').append(HTMLskillsStart);
-		
+
 		for(var i = 0; i < bio.skills.length; i++){
 			var formattedSkills = HTMLskills.replace("%data%",bio.skills[i]);
 			$('#skills-h3').append(formattedSkills);
 		}
 
 	}
-};
-
+}
 skills();
-	
 };
 
 bio.Display();
 
-
-var work = { 
+var work = {
 		"jobs": [{
 		"currentJobPosition" : "",
 		"Employer" : "<a href='https://www.freecodecamp.com/undreamtmayhem' class='project-links'>CodeCamp</a>",
 		"YearsWorker" : "March 5th",
 		"City" : "Hayle",
-		"jobDescription": "Currently have a portfolio to build and javascript algorithms"
+		"jobDescription": "Recently Finished Basic Front End Projects. I am now Building Intermediate Front End Projects and completing javascript algorithms."
 		},
 		{
 		"currentJobPosition" : "",
 		"Employer" : "<a href='#' class='project-links'>Python projects</a>",
 		"YearsWorker" : "Feb  27th",
 		"City" : "Miami",
-		"jobDescription": "Currently Planing on building python projects with TK and kivvy <ul><li class='future-project-desc'> - Calculator</li><li class='future-project-desc'>- Text editor</li><li class='future-project-desc'>- Paint app</li><li class='future-project-desc'>- Database app</li></ul>"		}]
+		"jobDescription": "Currently Planing on building python projects with TK and kivvy <ul><li class='future-project-desc'>Calculator</li><li class='future-project-desc'>Text editor</li><li class='future-project-desc'>Paint app</li><li class='future-project-desc'>Database app</li></ul>"		}
+  ]
 };
-
 function DisplayWork(){
 	for (var w in work.jobs) {
 		if (work.jobs.hasOwnProperty(w)) {
@@ -90,70 +102,69 @@ function DisplayWork(){
 			$('.work-entry:last').append(formattedWorkDescription);
 		}
 	}
-};
-
-
+}
 
 DisplayWork();
 
+/*
+  Project Info
 
-
-
-
-
-var project = { 
+*/
+var project = {
 			"projects" : [ {
 	"title" : "Front-End Developer Nanodegree",
-	"dates" : "In process",
-	"description": "<a class='title' href=”#” >Project: Build a Portfolio Site</a><p class='programming-languages'>HTML, CSS, Bootstrap</p><ul><li class='objectives'>Precisely translate initial design documents into static web pages</li><li class='objectives'>Diligently employ a code/test/refine strategy</li><li class='objectives'>Investigate the Document Object Model (DOM)</li><li  class='objectives'>Create and personalize your own multi-platform, responsive CSS framework</li></ul><a  class='title' href=”#”>Project: Interactive Resume</a><p  class='programming-languages'> Module 2: JavaScript Basics </p><ul><li class='objectives'>Transform static web pages into dynamic applications</li><li class='objectives'>Use variables, data structures, conditional statements, loops, and function in JavaScript</li><li class='objectives'>Use the core features of jQuery -- DOM element selections, traversal and manipulation</li></ul><a class='title' href=”#”>Project: Classic Arcade Game Clone</a><p class='programming-languages'>Scope, closures, prototypal inheritance, code reuse</p><li class='objectives'>Add entities to a game loop engine and create the classic arcade game Frogger</li><ul><li class='objectives'>Utilize the various object-oriented programming features within JavaScript</li><li class='objectives'>Write reusable and maintainable libraries</li><li class='objectives'>Create well architected and performant applications</li><li class='objectives'>Make compositions with text and images with memes</li><li class='objectives'>Modify images by applying various effects and filters</li><li class='objectives'>Create animations</li></ul><a href=”#” class='title'>Project: optimize an existing website that achieves 60 frames per second performance</a><ul><li class='objectives'>Recognize the four distinct phases in an app's lifecycle: Response, Animation, Idle and Load (RAIL)</li><li class='objectives'>Profile different apps to find the source of jank</li><li class='objectives'>Optimize layers to reduce the number of steps the browser needs to take to render each frame</li><li class='objectives'>Measure performance via the Timeline view in Chrome Developer Tools</li><li class='objectives'>Use key metrics to triangulate potential performance bottlenecks</li><a href=”#” class='title'>Project: Neighborhood Map</a><p class='programming-languages'>KnockoutJS, third-party APIs, asynchronous programming</p><p>Create a single page app featuring a map of a neighborhood of your choice</p><p>The neighborhood map application is complex enough and incorporates a variety of data points that it can easily become unwieldy to manage.<br/>There are a number of frameworks, libraries and APIs available to make this process more manageable and many employers are looking for specific skills in using these packages.</p><a href=”#” class='title'>Project: Feed Reader Testing</a><ul><li class='objectives'>Query servers using AJAX</li><li class='objectives'>Build a project with an overall organizational paradigm</li><li class='objectives'>Explore code you didn't write, and use a library or framework you aren't familiar with</li><li class='objectives'>Interact with API servers</li><li class='objectives'>Use third-party libraries and APIs</li></ul><ul><li class='objectives'>Write comprehensive suites of tests to validate your application is functioning as intended at all times</li><li class='objectives'>Use the red-green-refactor workflow</li><li class='objectives'>Test asynchronous functions</li>,",
-	"image": "./images/197x148.gif"
+	"dates" : "Tidying Up",
+	"description": "<a class='title' href=”https://github.com/UndreamtMayhem/FrontEnd-Web-Development/tree/master/P1%20PORTFOLIO”>Project: Build a Portfolio Site</a><p class='programming-languages'>HTML, CSS, Bootstrap</p><ul><li class='objectives'>Precisely translate initial design documents into static web pages</li><li class='objectives'>Diligently employ a code/test/refine strategy</li><li class='objectives'>Investigate the Document Object Model (DOM)</li><li class='objectives'>Create and personalize your own multi-platform, responsive CSS framework</li></ul><a  class='title' href=”#”>Project: Interactive Resume</a><p class='programming-languages'>JavaScript Basics </p><ul><li class='objectives'>Transform static web pages into dynamic applications</li><li class='objectives'>Use variables, data structures, conditional statements, loops, and function in JavaScript</li><li class='objectives'>Use the core features of jQuery -- DOM element selections, traversal and manipulation</li></ul><a class='title' href=”#”>Project: Classic Arcade Game Clone</a><p class='programming-languages'>Scope, closures, prototypal inheritance, code reuse</p><ul><li class='objectives'>Add entities to a game loop engine and create the classic arcade game Frogger</li><li class='objectives'>Utilize the various object-oriented programming features within JavaScript</li><li class='objectives'>Write reusable and maintainable libraries</li><li class='objectives'>Create well architected and performant applications</li><li class='objectives'>Make compositions with text and images with memes</li><li class='objectives'>Modify images by applying various effects and filters</li><li class='objectives'>Create animations</li></ul><a href=”#” class='title'>Project: optimize an existing website that achieves 60 frames per second performance</a><p class='programming-languages'>Browser Optimization</p><ul><li class='objectives'>Recognize the four distinct phases in an app's lifecycle: Response, Animation, Idle and Load (RAIL)</li><li class='objectives'>Profile different apps to find the source of jank</li><li class='objectives'>Optimize layers to reduce the number of steps the browser needs to take to render each frame</li><li class='objectives'>Measure performance via the Timeline view in Chrome Developer Tools</li><li class='objectives'>Use key metrics to triangulate potential performance bottlenecks</li></ul><a href=”#” class='title'>Project: Neighborhood Map</a><p class='programming-languages'>Using Knockout</p><ul><li class='objectives'>KnockoutJS, third-party APIs, asynchronous programming</li><li class='objectives'>Create a single page app featuring a map of a neighborhood of your choice</li><li class='objectives'>The neighborhood map application is complex enough and incorporates a variety of data points that it can easily become unwieldy to manage.</li><li class='objectives'>There are a number of frameworks, libraries and APIs available to make this process more manageable and many employers are looking for specific skills in using these packages.</li></ul><a href=”#” class='title'>Project: Feed Reader Testing</a><p class='programming-languages'>Red/Green testing</p><ul><li class='objectives'>Query servers using AJAX</li><li class='objectives'>Build a project with an overall organizational paradigm</li><li class='objectives'>Explore code you didn't write, and use a library or framework you aren't familiar with</li><li class='objectives'>Interact with API servers</li><li class='objectives'>Use third-party libraries and APIs</li></ul><ul><li class='objectives'>Write comprehensive suites of tests to validate your application is functioning as intended at all times</li><li class='objectives'>Use the red-green-refactor workflow</li><li class='objectives'>Test asynchronous functions</li></ul>","image": "./images/197x148.gif"
 				},
 					{
 							"title" : "Full Stack Web Developer Nanodegree",
 							"dates" : "A long way off",
-							"description": "<h3 class='project-header'>Project: Movie Trailer Website</h3><p>You will write server-side code to store a list of your favorite movies, including box art imagery and a movie trailer URL. You will then serve this data as a web page allowing visitors to review their movies and watch the trailers.</p><ul><li class='objectives' >Programming Foundations with Python</li></ul><h3 class='project-header'>Project: Build a Portfolio Site</h3><p>You will be provided with a design mockup as a PDF-file and must replicate that design in HTML and CSS. You will develop a responsive website that will display images, descriptions and links to each of the portfolio projects you will complete throughout the course of the Front-End Web Developer Nanodegree.</p><ul><li class='objectives'>Responsive Web Design Fundamentals</li><li class='objectives'>Intro to HTML and CSS</li><li class='objectives'>Responsive Images</li></ul><h3 class='project-header'>Project: Multi User Blog</h3><p>In this project you will be building a multi user blog(along the lines of Medium) where users can sign in and post blog posts as well as 'Like' and 'Comment' on other posts made on the blog. You will be hosting this blog on Google App Engine and you will also be creating an authentication system for users to be able to register and sign in and then create blog posts!</p><ul><li class='objectives'>Intro to Backend</li></ul><h3 class='project-header'>Project: Tournament Results</h3><p>You will develop a database schema to store the game matches between players. You will then write code to query this data and determine the winners of various games.</p><ul><li class='objectives'>Intro to Relational Databases<li></ul><h3 class='project-header'>Project: Item Catalog</h3><p>You will develop an application that provides a list of items within a variety of categories as well as provide a user registration and authentication system. Registered users will have the ability to post, edit and delete their own items.</p><ul><li class='objectives'>Authentication & Authorization: OAuth</li><li class='objectives'>Full Stack Foundations</li><h3 class='project-header'>Project: Neighborhood Map</h3><p>You will develop a single-page application featuring a map of your neighborhood or a neighborhood you would like to visit. You will then add additional functionality to this application, including: map markers to identify popular locations or places you’d like to visit, a search function to easily discover these locations, and a listview to support simple browsing of all locations. You will then research and implement third-party APIs that provide additional information about each of these locations (such as StreetView images, Wikipedia articles, Yelp reviews, etc).</p><ul><li class='objectives'>Intro to AJAX</li><li class='objectives'>JavaScript Design Patterns</li><h3 class='project-header'>Project: Design a Game</h3><p>In this project you will use these skills to develop your own game! You will write an API with endpoints that will allow anyone to develop a front-end for your game. Since you aren't required to write a front-end you can use API explorer to test your API.</p><ul><li class='objectives'>Developing Scalable Apps in Python</li></ul><h3 class='project-header'>Project: Linux Server Configuration</h3><p>You will take a baseline installation of a Linux distribution on a virtual machine and prepare it to host your web applications, to include installing updates, securing it from a number of attack vectors and installing/configuring web and database servers.</p><ul><li class='objectives'>Configuring Linux Web Servers</li><li class='objectives'>Linux Command Line Basics</li>"
-						
-							}	
-	   					 ]	
+							"description": "<h3 class='project-header'>Project: Movie Trailer Website</h3><p>You will write server-side code to store a list of your favorite movies, including box art imagery and a movie trailer URL. You will then serve this data as a web page allowing visitors to review their movies and watch the trailers.</p><ul><li class='objectives' >Programming Foundations with Python</li></ul><h3 class='project-header'>Project: Build a Portfolio Site</h3><p>You will be provided with a design mockup as a PDF-file and must replicate that design in HTML and CSS. You will develop a responsive website that will display images, descriptions and links to each of the portfolio projects you will complete throughout the course of the Front-End Web Developer Nanodegree.</p><ul><li class='objectives'>Responsive Web Design Fundamentals</li><li class='objectives'>Intro to HTML and CSS</li><li class='objectives'>Responsive Images</li></ul><h3 class='project-header'>Project: Multi User Blog</h3><p>In this project you will be building a multi user blog(along the lines of Medium) where users can sign in and post blog posts as well as 'Like' and 'Comment' on other posts made on the blog. You will be hosting this blog on Google App Engine and you will also be creating an authentication system for users to be able to register and sign in and then create blog posts!</p><ul><li class='objectives'>Intro to Backend</li></ul><h3 class='project-header'>Project: Tournament Results</h3><p>You will develop a database schema to store the game matches between players. You will then write code to query this data and determine the winners of various games.</p><ul><li class='objectives'>Intro to Relational Databases<li></ul><h3 class='project-header'>Project: Item Catalog</h3><p>You will develop an application that provides a list of items within a variety of categories as well as provide a user registration and authentication system. Registered users will have the ability to post, edit and delete their own items.</p><ul><li class='objectives'>Authentication & Authorization: OAuth</li><li class='objectives'>Full Stack Foundations</li></ul><h3 class='project-header'>Project: Neighborhood Map</h3><p>You will develop a single-page application featuring a map of your neighborhood or a neighborhood you would like to visit. You will then add additional functionality to this application, including: map markers to identify popular locations or places you’d like to visit, a search function to easily discover these locations, and a listview to support simple browsing of all locations. You will then research and implement third-party APIs that provide additional information about each of these locations (such as StreetView images, Wikipedia articles, Yelp reviews, etc).</p><ul><li class='objectives'>Intro to AJAX</li><li class='objectives'>JavaScript Design Patterns</li></ul><h3 class='project-header'>Project: Design a Game</h3><p>In this project you will use these skills to develop your own game! You will write an API with endpoints that will allow anyone to develop a front-end for your game. Since you aren't required to write a front-end you can use API explorer to test your API.</p><ul><li class='objectives'>Developing Scalable Apps in Python</li></ul><h3 class='project-header'>Project: Linux Server Configuration</h3><p>You will take a baseline installation of a Linux distribution on a virtual machine and prepare it to host your web applications, to include installing updates, securing it from a number of attack vectors and installing/configuring web and database servers.</p><ul><li class='objectives'>Configuring Linux Web Servers</li><li class='objectives'>Linux Command Line Basics</li></ul>"
+
+							}
+	   					 ]
 };
 
 
 project.display = function(){
-	
+
 	for (var p in project.projects) {
 		if (project.projects.hasOwnProperty(p)) {
 			var element = project.projects[p];
 			$("#projects").append(HTMLprojectStart);
-			
+
 			var formattedProjecttitle = HTMLprojectTitle.replace("%data%", element.title);
 			$(".project-entry:last").append(formattedProjecttitle);
-			
+
 			//var formattedProjectDate = HTMLprojectDates.replace("%data%", element.dates);
 			//$(".project-entry:last").append(formattedProjectDate);
-			
+
 			var formattedProjectDescription = HTMLprojectDescription.replace("%data%", element.description);
 			$(".project-entry:last").append(formattedProjectDescription);
-			
+
 			//var formattedProjectImage = HTMLprojectImage.replace("%data%", element.image);
 			//$(".project-entry:last").append(formattedProjectImage);
-			
+
 		}
 	}
 };
 
 project.display();
 
+/*
 
+  Education Info
 
+*/
 var education = {
 	"schools": [{
-		"name" : "Truro – Penwith {add link}",
+		"name" : "Truro – Penwith",
 		"location" : "Penzance",
 		"degree" : "HND",
 		"majors": "Applied Psychology",
 		"date" : "12"	      },
 		  {
-		"name" : "Plymouth University {add link}",
+		"name" : "Plymouth University",
 		"location" : "Truro",
 		"degree" : "BDC",
 		"majors": "BSC Psychology",
@@ -232,31 +243,31 @@ var education = {
 education.DisplayCollege = function(){
 	for (var k in education.schools) {
 		if (education.schools.hasOwnProperty(k)) {
-			var School = education.schools[k];		
+			var School = education.schools[k];
 					$('#education').append(HTMLschoolStart);
-					
+
 					var formattedschoolName = HTMLschoolName.replace("%data%", School.name);
-					
+
 					$('.education-entry:last').append(formattedschoolName);
-					
+
 					//var formattedschoolDates = HTMLschoolDates.replace("%data%", School.date);
 
 					//$('.education-entry:last').append(formattedschoolDates);
-					
+
 					var formattedschoolMajor = HTMLschoolMajor.replace("%data%", School.majors);
 
-					$('.education-entry:last').append(formattedschoolMajor);					
-					
-					var formattedschoolDegree = HTMLschoolDegree.replace("%data%", School.degree);
-				
-					$('.education-entry:last').append(formattedschoolDegree);
-				
-					var formattedschoolLocation  = HTMLschoolLocation.replace("%data%", School.location);
-			
-					$('.education-entry:last').append(formattedschoolLocation);
-					
+					$('.education-entry:last').append(formattedschoolMajor);
 
-		}	
+					var formattedschoolDegree = HTMLschoolDegree.replace("%data%", School.degree);
+
+					$('.education-entry:last').append(formattedschoolDegree);
+
+					var formattedschoolLocation  = HTMLschoolLocation.replace("%data%", School.location);
+
+					$('.education-entry:last').append(formattedschoolLocation);
+
+
+		}
 	}
 };
 
@@ -265,26 +276,26 @@ education.DisplayCollege();
 education.DisplayOnlineCourses = function(){
 			var formattedHTMLonlineClasses = HTMLonlineClasses;
 			$('.education-entry:last').append(formattedHTMLonlineClasses);
-			
+
 	for (var key in education.onlineCourses) {
 		if (education.onlineCourses.hasOwnProperty(key)) {
 			var onlineCourse = education.onlineCourses[key];
-			
+
 			var formattedschoolStart = HTMLschoolStart;
 			$('#education').append(formattedschoolStart);
 			var formattedHTMLonlineTitle = HTMLonlineTitle.replace("%data%", onlineCourse.Title);
 			var formattedHTMLonlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.Schools);
-		    
+
 
 			var topbar = formattedHTMLonlineTitle + formattedHTMLonlineSchool;
 			$('.education-entry:last').append(topbar);
-						
+
 			var formattedHTMLonlineDates = HTMLonlineDates.replace("%data%", onlineCourse.date);
 			$('.education-entry:last').append(formattedHTMLonlineDates);
-			
+
 		    var formmattedHTMLCourseDescriptionHeader = HTMLonlineCourseDescriptionHeader;
-			$('.education-entry:last').append(formmattedHTMLCourseDescriptionHeader); 
-		
+			$('.education-entry:last').append(formmattedHTMLCourseDescriptionHeader);
+
 			var formattedHTMLonlineDescription = HTMLonlineDescription.replace("%data%", onlineCourse.description);
 			$('.education-entry:last').append(formattedHTMLonlineDescription);
 
@@ -305,16 +316,16 @@ education.DisplayOnlineCourses = function(){
 
 			var formattedHTMLonlineURL = HTMLonlineURL.replace("%data%", onlineCourse.URL);
 			$('.education-entry:last').append(formattedHTMLonlineURL);
-		
+
 		}
-			
+
 		}
 };
 
 education.DisplayOnlineCourses();
 
 
-//join header and footer together 
+//join header and footer together
 var footerDisplay = function(){
 	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);

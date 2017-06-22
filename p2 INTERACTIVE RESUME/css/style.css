@@ -15,6 +15,11 @@ h6,
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  line-height: 1.4em;
+}
+
+
 .clear-fix {
   overflow: auto;
 }
@@ -84,8 +89,14 @@ h5 {
   font-size: 14px;
   color: #999;
   line-height: 16px;
-  /*float: right;*/
+  float: right;
 }
+
+.date-text, .work-text {
+  padding-top: 10px;
+}
+
+
 
 .location-text {
   font-style: italic;
@@ -221,6 +232,7 @@ li{
 
 ul {
   list-style-type: none;
+  text-align: center;
 }
 
 .biopic {
@@ -292,16 +304,17 @@ span {
     display: block;
     border-radius: 47%
   }
-  
+
 }
 /* Personalized styles projects*/
 .project-header{
-  padding:0;
-  text-align: center;
+  padding:10px 0;
+  /*text-align: center;*/
 }
 
 .programming-languages{
   float: none;
+  padding-top: 10px;
 }
 .project-overview{
   font-weight: bold;
