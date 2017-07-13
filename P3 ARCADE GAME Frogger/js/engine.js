@@ -217,7 +217,7 @@ var Engine = (function(global) {
         'images/char-cat-girl.png',
         'images/char-princess-girl.png',
         'images/Gem_Orange_fx.png',
-        'images/frogger-assests/Gem_Green_fx.png',
+        'images/Gem_Green_fx.png',
         'images/Gem_Blue_fx.png',
         'images/Heart_fx.png',
         'images/Selector.png'

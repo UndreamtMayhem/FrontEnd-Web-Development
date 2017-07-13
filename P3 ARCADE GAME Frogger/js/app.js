@@ -492,5 +492,3 @@ document.addEventListener('keyup', function (e) {
   player.handleInput(allowedKeys[e.keyCode]);
   gm.handleInput(allowedKeys[e.keyCode]);
 })
-
-
