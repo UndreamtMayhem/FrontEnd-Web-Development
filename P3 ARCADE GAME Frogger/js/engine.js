@@ -137,12 +137,12 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957411/frogger-assests/water-block.png',   // Top row is water
-                'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/stone-block.png',   // Row 1 of 3 of stone
-                'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/stone-block.png',   // Row 2 of 3 of stone
-                'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/stone-block.png',   // Row 3 of 3 of stone
-                'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/grass-block.png',   // Row 1 of 2 of grass
-                'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/grass-block.png'    // Row 2 of 2 of grass
+                'images/water-block.png',   // Top row is water
+                'images/stone-block.png',   // Row 1 of 3 of stone
+                'images/stone-block.png',   // Row 2 of 3 of stone
+                'images/stone-block.png',   // Row 3 of 3 of stone
+                'images/grass-block.png',   // Row 1 of 2 of grass
+                'images/grass-block.png'    // Row 2 of 2 of grass
             ],
             numRows = 6,
             numCols = 5,
@@ -209,18 +209,18 @@ var Engine = (function(global) {
     
     //add my resources
     Resources.load([
-        'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/stone-block.png',
-        'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/water-block.png',
-        'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/grass-block.png',
-        'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/enemy-bug.png',
-        'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/char-boy.png',
-        'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/char-cat-girl.png',
-        'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/char-princess-girl.png',
-        'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/Gem_Orange_fx.png',
-        'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/Gem_Green_fx.png',
-        'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/Gem_Blue_fx.png',
-        'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/Heart_fx.png',
-        'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/Selector.png'
+        'images/stone-block.png',
+        'images/water-block.png',
+        'images/grass-block.png',
+        'images/enemy-bug.png',
+        'images/char-boy.png',
+        'images/char-cat-girl.png',
+        'images/char-princess-girl.png',
+        'images/Gem_Orange_fx.png',
+        'images/frogger-assests/Gem_Green_fx.png',
+        'images/Gem_Blue_fx.png',
+        'images/Heart_fx.png',
+        'images/Selector.png'
     ]);
     Resources.onReady(init);
 
