@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>MemeMaker-Simple</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+                crossorigin="anonymous">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/css-social-buttons/1.3.0/css/zocial.min.css" integrity="sha256-kzRFo8ea/i87LKGhQ1xWBM6Rm3zZBgIwVpdR8l6dlq8="
+                    crossorigin="anonymous" />
+                <link rel="stylesheet" type="text/css" href="./styles/index.css" />
+                <script language="javascript" type="text/javascript">
+                    function limitText(limitField, limitCount, limitNum) {
+                        if (limitField.value.length > limitNum) {
+                            limitField.value = limitField.value.substring(0, limitNum);
+                        } else {
+                            limitCount.value = limitNum - limitField.value.length;
+                        }
+                    }
+                </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-default navbar-inverse" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                        <a class="navbar-brand" href="#">Meme Creator</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <form class="navbar-form navbar-right" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="page-header">
+                    <h1>Meme Generator</h1>
+                    <p>Template for a Meme Generator site. Easily add text to images or memes or whatever!</p>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="container-fluid">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img class="img-responsive" src="./images/advert.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="jumbotron">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+                                <div id="image-container">
+                                    <canvas width="300" height="300"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <label>Top Line:</label><br/>
+                                        <form name="myform">
+                                            <textarea id="topLineText" name="limitedtopTextArea" onKeyDown="limitText(this.form.limitedtopTextArea,this.form.countdown,30);"
+                                                onKeyUp="limitText(this.form.limitedtopTextArea,this.form.countdown,30);">
+                                                </textarea><br>
+                                                <font size="1">(Maximum characters: 30)<br> You have
+                                                    <input readonly type="text" name="countdown"
+                                                        size="3" value="30"> characters left.</font>
+                                        </form>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <label>Bottom Line:</label><br/>
+                                        <form name="myform">
+                                            <textarea id="bottomLineText" name="limitedBottomTextArea" onKeyDown="limitText(this.form.limitedBottomTextArea,this.form.countdown,30);"
+                                                onKeyUp="limitText(this.form.limitedBottomTextArea,this.form.countdown,30);">
+                                                </textarea><br>
+                                                <font size="1">(Maximum characters: 30)<br> You have
+                                                    <input readonly type="text" name="countdown"
+                                                        size="3" value="30"> characters left.</font>
+                                        </form>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div role="tabpanel">
+                                            <!-- Nav tabs -->
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li role="presentation" class="active">
+                                                    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Text Color</a>
+                                                </li>
+                                                <li role="presentation">
+                                                    <a href="#tab" aria-controls="tab" role="tab" data-toggle="tab">Text Outline</a>
+                                                </li>
+                                                <li role="presentation">
+                                                    <a href="#font-style" aria-controls="tab" role="tab" data-toggle="tab">Font Style</a>
+                                                </li>
+                                            </ul>
+                                            <!-- Tab panes -->
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="home">
+                                                    <p>Selections of colors </p>
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <div class="font-color-choice">
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                    </div>
+                                                    <!---  future work   form class="tab-form">
+                                                        <div class="form-group">
+                                                            <p>Add your own hex code</p>
+                                                            <input type="text" placeholder="#000000"/>
+                                                            <button>Button</button>
+                                                        </div>
+                                                    </form> -->
+                                                    <p></p>
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane" id="tab">
+                                                    <p>Selections of colors </p>
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <div class="font-outline-color-choice">
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                    </div>
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane" id="font-style">
+                                                    <p>Choose a font</p>
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <input type="radio" name="font-type" value="Arial" checked> Arial
+                                                        <input type="radio" name="font-type" value="Verdana"> Verdana
+                                                        <input type="radio" name="font-type" value="Times New Roman"> Times
+                                                        New Roman
+                                                        <input type="radio" name="font-type" value="Courier New"> Courier
+                                                        New
+                                                        <input type="radio" name="font-type" value="serif"> serif
+                                                        <input type="radio" name="font-type" value="sans-serif"> sans-serif
+                                                        <input type="radio" name="font-type" value="impact"> impact
+                                                        <!-- <p>Font Size</p>
+                                                         <input type="range" id="font" min="4" max="60" value="37"> -->
+                                                        <button class="change-font-btn" onclick="changeFont()">Change Font</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Open image</label>
+                                    <input type="file" id="file">
+                                    <br />
+                                    <a class="btn btn-primary" id="saveBtn" data-toggle="modal" href='#modal-id'>Save Meme</a>
+                                </div>
+                                <div>
+                                    <div class="modal fade" id="modal-id">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title">Your memes</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img id="canvasImg" alt="Right click to save me!">
+                                                    <p> Right click to save XD</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <h4>Follow Us On</h4>
+                            <a class="zocial icon facebook" href="www.facebook.com"></a>
+                            <a class="zocial icon twitter" href="www.twitter.com"></a>
+                            <a class="zocial icon googleplus" href="www.googleplus.com"></a>
+                            <a class="zocial icon github" href="www.github.com"></a>
+                            <a class="zocial icon instagram" href="www.instagram.com"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <ul class="footer-list">
+                        <li class="footer-list-item"><a href="">9Gag</a></li>
+                        <li class="footer-list-item"><a href="">Imgur</a></li>
+                        <li class="footer-list-item"><a href="">Imgflip</a></li>
+                        <li class="footer-list-item"><a href="">Memes.com</a></li>
+                        <li class="footer-list-item"><a href="">Know your memes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                    <p>Edison bulb cold-pressed thundercats craft beer drinking vinegar, mlkshk vaporware art party vice. Aesthetic
+                        bushwick twee, salvia neutra raw denim hashtag iPhone pork belly unicorn tofu. Pour-over gochujang
+                        put a bird on it meh neutra. Hot chicken lumbersexual XOXO, gastropub church-key wayfarers tattooed
+                        gentrify cold-pressed. Jianbing four dollar toast sartorial, coloring book poke offal neutra trust
+                        fund pickled leggings. Fam lumbersexual keffiyeh aesthetic, distillery tattooed ennui raw denim echo
+                        park biodiesel man braid knausgaard la croix. Meggings you probably haven't heard of them biodiesel
+                        gentrify kitsch, taxidermy mixtape.</p>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                </div>
+            </div>
+            <p class="text-center">Copyright 2017</p>
+        </div>
+    </div>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+meme generator
+
+response forms look at 
+style input to text area with placeholder text
+reset button!!!!
+
+get toptext and bottom empty out
+
+modal with saved picture style it
+modal has create another section
+
+
+
+footer inline li 
+list style none 
+
+change stroke style 
+and fill style
+
+div with the colors to pick from
+
+
+text style
+font fize
+font color
+
+
+
+
+filters
+
+basics
+https://www.html5rocks.com/en/tutorials/canvas/imagefilters/
+
+use getImageData()
+
+red=imgData.data[0];
+green=imgData.data[1];
+blue=imgData.data[2];
+alpha=imgData.data[3];
+
+
+read for examples
+https://www.w3schools.com/tags/canvas_getimagedata.asp
+
+
+
+
+greyscale
+
+
+// Loop through data.
+        for (var i = 0; i < picLength * 4; i += 4) {
+
+          // First bytes are red bytes.        
+          // Get red value.
+          var myRed = myImage.data[i];
+
+          // Second bytes are green bytes.
+          // Get green value.
+          var myGreen = myImage.data[i + 1];
+
+          // Third bytes are blue bytes.
+          // Get blue value.
+          var myBlue = myImage.data[i + 2];
+
+          // Fourth bytes are alpha bytes
+          // We don't care about alpha here.
+          // Add the three values and divide by three.
+          // Make it an integer.
+          myGray = parseInt((myRed + myGreen + myBlue) / 3);
+
+          // Assign average to red, green, and blue.
+          myImage.data[i] = myGray;
+          myImage.data[i + 1] = myGray;
+          myImage.data[i + 2] = myGray;
+        }
+
+
+make space game
+
+https://msdn.microsoft.com/en-us/library/gg601425(v=vs.85).aspx
+
+
+other canvas
+https://msdn.microsoft.com/en-us/library/gg589510(v=vs.85).aspx

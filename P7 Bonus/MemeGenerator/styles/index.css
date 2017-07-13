@@ -1,0 +1,50 @@
+.jumbotron {
+    padding: 2px;
+}
+
+
+h1 {
+    margin: 0px;
+
+}
+
+
+
+.page-header {
+    margin: 0px;   
+    padding: 0px;
+
+
+}
+
+
+
+/*My items    */
+
+.color-box {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    float: left;
+    background-color: red;
+}
+
+.tab-form {
+    float: none;
+    display: block;
+}
+
+
+
+
+.footer-list{
+    list-style: none;
+      text-align: center;
+
+}
+.footer-list-item {
+    display: inline;
+    padding: 10px;
+  
+
+}

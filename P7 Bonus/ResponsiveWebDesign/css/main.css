@@ -1,0 +1,42 @@
+/*
+
+Your styles go here!
+
+Hint! You'll probably want to start by styling:
+  * <body>
+  * <article>
+  * <h1>
+  * <img>
+
+I've left some boilerplate below for you.
+
+*/
+
+body {
+  margin: 0 auto;
+  max-width: 50em;
+}
+
+
+
+h1 {
+
+}
+
+img {
+    width: 100%;
+}
+
+article {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 50em;
+  border-bottom: 1px solid #ddd;
+}
+
+@media screen and (max-width: 250px){
+  img {
+    width: 100vw;
+  }
+}
