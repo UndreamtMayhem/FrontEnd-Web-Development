@@ -210,7 +210,6 @@ var Engine = (function(global) {
     //add my resources
     Resources.load([
         'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/stone-block.png'
-        'images/stone-block.png',
         'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/water-block.png',
         'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/grass-block.png',
         'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957408/frogger-assests/enemy-bug.png',
