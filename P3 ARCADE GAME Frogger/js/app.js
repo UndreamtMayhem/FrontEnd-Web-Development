@@ -28,15 +28,15 @@ var ene3Speed = 35;
 
 var gemBluePoints = 10;
 var gemBlueDeath = 500;
-var gemBlueSprite = 'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957405/frogger-assests/Gem_Blue_fx.png';
+var gemBlueSprite = 'images/Gem_Blue_fx.png';
 
 var gemGreenPoints = 10;
 var gemGreenDeath = 330;
-var gemGreenSprite = 'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957405/frogger-assests/Gem_Green_fx.png';
+var gemGreenSprite = 'images/Gem_Green_fx.png';
 
 var gemOrangePoints = 30;
 var gemOrangeDeath = 330;
-var gemOrangeSprite = 'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957405/frogger-assests/Gem_Orange_fx.png';
+var gemOrangeSprite = 'images/Gem_Orange_fx.png';
 
 var GameManager = function () {
   this.isGameActive = false;
@@ -333,9 +333,9 @@ character.prototype.render = function () {
       ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
 
-var charBoy = new character(100, 350, 'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957405/frogger-assests/char-boy.png');
-var charCat = new character(200, 350, 'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957405/frogger-assests/char-cat-girl.png');
-var charPrincess = new character(300, 350, 'http://res.cloudinary.com/undreamtmayhem/image/upload/v1499957405/frogger-assests/char-princess-girl.png');
+var charBoy = new character(100, 350, 'images/char-boy.png');
+var charCat = new character(200, 350, 'images/char-cat-girl.png');
+var charPrincess = new character(300, 350, 'images/char-princess-girl.png');
 var allCharacters = [charBoy, charCat, charPrincess];
 
 // Now write your own player class
@@ -492,3 +492,5 @@ document.addEventListener('keyup', function (e) {
   player.handleInput(allowedKeys[e.keyCode]);
   gm.handleInput(allowedKeys[e.keyCode]);
 })
+
+
