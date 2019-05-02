@@ -1,9 +1,9 @@
 # P1: Arcade Game Frogger
 ![game ui](https://github.com/UndreamtMayhem/Udacity-Front-End-Web-Development/blob/master/P3%20ARCADE%20GAME%20Frogger/gameui.PNG)
 
-## how to Run
+## How to Run
 - open index.html
-## how to Play
+## How to Play
 - Press Space to start the game
 - use arrowkeys for directions
 
