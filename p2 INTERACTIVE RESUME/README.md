@@ -1,10 +1,3 @@
-# Future Development
-###V1
-HEADER: is good enough possibly consider background color
-Future projects: image 50% left text floated to the right
-Current Project: Needs massive overhaul. Needs to be put inside divs. links to my project and links to the course
-
-
 # Project Details
 ## How do I complete this project?
 Review the Online Resume [Project Rubric](https://review.udacity.com/?_ga=1.189245867.12280332.1465333852#!/projects/2962818615/rubric).
