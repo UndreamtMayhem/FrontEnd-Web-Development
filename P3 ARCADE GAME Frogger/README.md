@@ -1,5 +1,4 @@
 # P1: Arcade Game Frogger
-===============================
 
 ## Game Look
 ![game ui](https://github.com/UndreamtMayhem/Udacity-Front-End-Web-Development/blob/master/P3%20ARCADE%20GAME%20Frogger/gameui.PNG)
