@@ -265,13 +265,7 @@ var label = function(font, txtColor, text, canvasX, canvasY) {
     this.canvasY = canvasY;
 }
 
-
-
-
 label.prototype.update = function(dt) {}
-
-
-
 
 // Created a label for lives 
 var livesLabel = new label('19px Arial', 'Black', 'Lives:', 429, 82)
