@@ -2,14 +2,8 @@
 Style Guidelines
 CSS REQUIRED Rules
 CSS - Use consistent indentation (tabs or spaces). (See: CSS General Formatting Rules-Indentation)
-
-
 CSS - Selectors, properties and property values (with the exception of strings) should be lowercase, including letters in hexadecimal color values. For example #f06c13 instead of #F06C13 and #ccc rather than #CCC. (See: CSS-General Formatting Rules-Capitalization.)
-
-
 CSS - Use IDs and class names that are meaningful or generic. (See: CSS-ID and Class Naming.)
-
-
 CSS - Use ID and class names that are as short as possible but as long as necessary. (See: CSS-ID and Class Naming.)
 CSS - Use Shorthand properties in all possible places for margin, border, padding, background. Examples: https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties. (See: CSS Style Rules-Shorthand Properties.)
 CSS - Indent block content between curly braces. (See: CSS Formatting Rules-Block Content Indentation.)
