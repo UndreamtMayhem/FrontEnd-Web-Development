@@ -19,7 +19,7 @@ Languages: HTML, CSS, Bootstrap
 - Diligently employ a code/test/refine strategy
 - Investigate the Document Object Model (DOM)
 - Create and personalize your own multi-platform, responsive CSS framework
-
+![project 1](https://github.com/UndreamtMayhem/Udacity-Front-End-Web-Development/blob/master/P1%20PORTFOLIO/rubrics/mydesign.PNG)
 
 ### Module 2: Interactive Resume                       
 #### JavaScript Basics
