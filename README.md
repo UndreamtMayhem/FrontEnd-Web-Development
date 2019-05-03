@@ -19,7 +19,7 @@ Languages: HTML, CSS, Bootstrap
 - Diligently employ a code/test/refine strategy
 - Investigate the Document Object Model (DOM)
 - Create and personalize your own multi-platform, responsive CSS framework
-
+![project 1](https://github.com/UndreamtMayhem/Udacity-Front-End-Web-Development/blob/master/P1%20PORTFOLIO/rubrics/mydesign.PNG)
 
 ### Module 2: Interactive Resume                       
 #### JavaScript Basics
@@ -28,6 +28,8 @@ Languages: HTML, CSS, Bootstrap
 - Use the core features of jQuery -- DOM element selections, traversal and manipulation
 - Once you've mastered the skills of a front end web developer you'll want to make a great first impression. You need a resume that stands out.
 - The resume you create will not only help you build important skills, but will also make it easy to show employers why you’re perfect for the job.
+
+![project 2](https://github.com/UndreamtMayhem/Udacity-Front-End-Web-Development/blob/master/P2%20INTERACTIVE%20RESUME/mydesign.PNG)
 
 ### Module 3: Classic Arcade Game Clone                
 #### OOP Javascript & HTML5 Canvas
@@ -39,6 +41,7 @@ Add entities to a game loop engine and create the classic arcade game Frogger
 - Make compositions with text and images with memes
 - Modify images by applying various effects and filters
 - Create animations
+![project 3](https://github.com/UndreamtMayhem/Udacity-Front-End-Web-Development/blob/master/P3%20ARCADE%20GAME%20Frogger/gameui.PNG)
 
 ### Module 4: Website Optimization Browser        
 #### Rendering and Web Performance Optimization RAIL, jank, critical rendering path
@@ -48,6 +51,7 @@ Add entities to a game loop engine and create the classic arcade game Frogger
 - Optimize layers to reduce the number of steps the browser needs to take to render each frame
 - Measure performance via the Timeline view in Chrome Developer Tools
 - Use key metrics to triangulate potential performance bottlenecks
+![project 4]()
 
 ### Module5: Neighborhood Map 	
 #### AJAX & JavaScript Design Patterns
@@ -57,6 +61,7 @@ Add entities to a game loop engine and create the classic arcade game Frogger
 - Explore code you didn't write, and use a library or framework you aren't familiar with
 - Interact with API servers
 - Use third-party libraries and APIs
+![project 5](https://github.com/UndreamtMayhem/Udacity-Front-End-Web-Development/blob/master/P5%20NEIGHBOURHOOD%20MAP/completed_project.PNG)
 
 ### Module 6:  Feed Reader Testing         
 #### JavaScript Testing
@@ -64,7 +69,7 @@ Add entities to a game loop engine and create the classic arcade game Frogger
 - Write comprehensive suites of tests to validate your application is functioning as intended at all times
 - Use the red-green-refactor workflow
 - Test asynchronous functions
-
+![project 6](https://github.com/UndreamtMayhem/Udacity-Front-End-Web-Development/blob/master/P6%20FEED%20READER%20TESTING/completed.PNG)
 
 
 
