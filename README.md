@@ -72,7 +72,10 @@ Add entities to a game loop engine and create the classic arcade game Frogger
 ![project 6](https://github.com/UndreamtMayhem/Udacity-Front-End-Web-Development/blob/master/P6%20FEED%20READER%20TESTING/completed.PNG)
 
 
+### Bonus Projects
+Meme Generator: in development
+![Meme Generator](https://github.com/UndreamtMayhem/Udacity-Front-End-Web-Development/blob/master/P7%20Bonus/MemeGenerator/design.PNG)
 
-##To do 
-[ ] tidy folders
-[ ] Check all is functional 
+Responsive Web development
+![Responsive Web development](https://github.com/UndreamtMayhem/Udacity-Front-End-Web-Development/blob/master/P7%20Bonus/ResponsiveWebDesign/completed.PNG
+)
