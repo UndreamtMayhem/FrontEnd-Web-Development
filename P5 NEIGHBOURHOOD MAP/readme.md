@@ -1,14 +1,19 @@
+# P5: NeighbourHood Map
+
+## Completed Project
+
+
+
+
 
 ## Requirements python installed
-## Mac and Linux
+### Mac and Linux
 Run command inside P5 NEIGHBOURHOOD MAP directory
-python -m SimpleHTTPServer 8000
+    python -m SimpleHTTPServer 8000
 
-## windows
+### windows
 Run command inside P5 NEIGHBOURHOOD MAP directory
     python -m http.server 8000
 
-
-
-## Navigate to 
+### Navigate in browser
 http://localhost:8000/
