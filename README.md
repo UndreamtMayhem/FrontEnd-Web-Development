@@ -51,7 +51,7 @@ Add entities to a game loop engine and create the classic arcade game Frogger
 - Optimize layers to reduce the number of steps the browser needs to take to render each frame
 - Measure performance via the Timeline view in Chrome Developer Tools
 - Use key metrics to triangulate potential performance bottlenecks
-![project 4]()
+![project 4](https://github.com/UndreamtMayhem/Udacity-Front-End-Web-Development/blob/master/P4%20WEBSITE%20OPTIMIZATION/completed.PNG)
 
 ### Module5: Neighborhood Map 	
 #### AJAX & JavaScript Design Patterns
