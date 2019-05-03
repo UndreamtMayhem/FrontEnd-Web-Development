@@ -1,17 +1,17 @@
 # P5: NeighbourHood Map
 
 ## Completed Project
-
+![project](https://github.com/UndreamtMayhem/Udacity-Front-End-Web-Development/blob/master/P5%20NEIGHBOURHOOD%20MAP/completed_project.PNG)
 
 
 
 
 ## Requirements python installed
-### Mac and Linux
+### Mac and Linux: Terminal
 Run command inside P5 NEIGHBOURHOOD MAP directory
     python -m SimpleHTTPServer 8000
 
-### windows
+### Windows CMD
 Run command inside P5 NEIGHBOURHOOD MAP directory
     python -m http.server 8000
 
