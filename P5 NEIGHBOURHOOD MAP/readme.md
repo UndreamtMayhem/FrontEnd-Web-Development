@@ -6,7 +6,7 @@
 
 
 
-## Requirements python installed
+## Requires Python to be installed
 ### Mac and Linux: Terminal
 Run command inside P5 NEIGHBOURHOOD MAP directory
     python -m SimpleHTTPServer 8000
