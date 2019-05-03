@@ -2,21 +2,18 @@
     padding: 2px;
 }
 
-
 h1 {
     margin: 0px;
-
 }
 
-
+form .character-limit {
+    font-size: 1.2rem;
+}
 
 .page-header {
-    margin: 0px;   
+    margin: 0px;
     padding: 0px;
-
-
 }
-
 
 
 /*My items    */
@@ -34,17 +31,12 @@ h1 {
     display: block;
 }
 
-
-
-
-.footer-list{
+.footer-list {
     list-style: none;
-      text-align: center;
-
+    text-align: center;
 }
+
 .footer-list-item {
     display: inline;
     padding: 10px;
-  
-
 }
